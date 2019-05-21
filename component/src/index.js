@@ -31,7 +31,7 @@ const Component = props => {
       }
     }
   });
-  return <div ref={measuredParent}>hi there {props.children}</div>;
+  return <div ref={measuredParent}>{props.children}</div>;
 };
 
 export default Component;
