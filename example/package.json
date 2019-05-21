@@ -8,7 +8,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-middle-ellipsis": "link:../component",
+    "react-middle-ellipsis": "link:../",
     "react-scripts": "^3.0.1"
   },
   "scripts": {

@@ -1,30 +1,31 @@
-# react-middle-ellipsis
-
-> 
-
-[![NPM](https://img.shields.io/npm/v/react-middle-ellipsis.svg)](https://www.npmjs.com/package/react-middle-ellipsis) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+# React Middle Ellipsis
 
 ## Install
 
-```bash
-npm install --save react-middle-ellipsis
+```
+yarn add react-middle-ellipsis
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import MyComponent from 'react-middle-ellipsis'
+import MyComponent from "react-middle-ellipsis";
 
 class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
+  render() {
+    return <MyComponent />;
   }
 }
 ```
+
+## Development
+
+Notes for developing this component.
+
+`yarn run start` in this directory and separately also in `/example`. This will
+live reload any changes made in `/src`.
 
 ## License
 

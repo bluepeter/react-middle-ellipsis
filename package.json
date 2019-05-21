@@ -16,8 +16,8 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
-    "predeploy": "cd ../example && yarn install && yarn run build",
-    "deploy": "gh-pages -d ../example/build"
+    "predeploy": "cd ./example && yarn install && yarn run build",
+    "deploy": "gh-pages -d ./example/build"
   },
   "peerDependencies": {
     "react": "^16.0.0",
