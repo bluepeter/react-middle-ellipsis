@@ -1,5 +1,11 @@
 # React Middle Ellipsis
 
+Adding ellipses to the end of long text is cool. But not always!
+Sometimes the end of the text contains vital information,
+particularly for URLs or filenames.
+
+This React component is designed with that use case in mind.
+
 ## Install
 
 ```bash
@@ -28,11 +34,14 @@ import MiddleEllipsis from "react-middle-ellipsis";
 class Example extends Component {
   render() {
     return (
-      <div style={{ width: "350px" }}>
+      <div style={{ width: "350px", whiteSpace: "nowrap" }}>
         <MiddleEllipsis>
           <span className="constrainedChild">
-            Don't ellipse me though.{" "}
-            <span className="constrainedEllipse">{longText}</span>
+            Don't ellipse me.{" "}
+            <span className="constrainedEllipse">
+              I am some long text that should be ellipsed in the middle because
+              the end contains important stuff.
+            </span>
           </span>
         </MiddleEllipsis>
       </div>
