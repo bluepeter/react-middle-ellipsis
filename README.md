@@ -2,20 +2,41 @@
 
 ## Install
 
-```
+```bash
 yarn add react-middle-ellipsis
 ```
 
 ## Usage
 
+Once `import`ed, you can then wrap any element with
+`<MiddleEllipsis>`. This will compute the width of the surrounding
+parent node. Then, it will look for a child node whose class is
+`constrainedChild`: it will use this element to compute the width
+of the child, and then shorten the text element whose class is
+`constrainedEllipsis` to fit within the parent.
+
+Why do we have both `constrainedChild` and `constrainedEllipsis`?
+Because we want BOTH to fit within the parent, but only one of them
+should be ellipse'd. This way, things such as icons or images won't
+be ellipsed.
+
 ```jsx
 import React, { Component } from "react";
 
-import MyComponent from "react-middle-ellipsis";
+import MiddleEllipsis from "react-middle-ellipsis";
 
 class Example extends Component {
   render() {
-    return <MyComponent />;
+    return (
+      <div style={{ width: "350px" }}>
+        <MiddleEllipsis>
+          <span className="constrainedChild">
+            Don't ellipse me though.{" "}
+            <span className="constrainedEllipse">{longText}</span>
+          </span>
+        </MiddleEllipsis>
+      </div>
+    );
   }
 }
 ```
