@@ -1,6 +1,6 @@
 {
   "name": "react-middle-ellipsis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Put the dots in the middle of a long string, versus the end.",
   "author": "bluepeter",
   "license": "MIT",
