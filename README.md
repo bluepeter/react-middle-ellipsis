@@ -1,5 +1,7 @@
 # React Middle Ellipsis
 
+[Check out the demo.](https://bluepeter.github.io/react-middle-ellipsis/)
+
 Adding ellipses to the end of long text is cool. But not always!
 Sometimes the end of the text contains vital information,
 particularly for URLs or filenames.
