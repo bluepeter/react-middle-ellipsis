@@ -59,6 +59,8 @@ Notes for developing this component.
 `yarn run start` in this directory and separately also in `/example`. This will
 live reload any changes made in `/src`.
 
+Change the version number in `package.json` and `npm publish` once complete.
+
 ## License
 
 MIT © [bluepeter](https://github.com/bluepeter)
