@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/react-middle-ellipsis/static/js/main.09c19a7f.chunk.js",
+    "main.js.map": "/react-middle-ellipsis/static/js/main.09c19a7f.chunk.js.map",
+    "runtime~main.js": "/react-middle-ellipsis/static/js/runtime~main.e349cbb3.js",
+    "runtime~main.js.map": "/react-middle-ellipsis/static/js/runtime~main.e349cbb3.js.map",
+    "static/js/2.3310f33a.chunk.js": "/react-middle-ellipsis/static/js/2.3310f33a.chunk.js",
+    "static/js/2.3310f33a.chunk.js.map": "/react-middle-ellipsis/static/js/2.3310f33a.chunk.js.map",
+    "index.html": "/react-middle-ellipsis/index.html",
+    "precache-manifest.6e9ad6808155d6faaffd02ab6093ec16.js": "/react-middle-ellipsis/precache-manifest.6e9ad6808155d6faaffd02ab6093ec16.js",
+    "service-worker.js": "/react-middle-ellipsis/service-worker.js"
+  }
+}
