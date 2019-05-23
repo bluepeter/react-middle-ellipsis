@@ -16,6 +16,7 @@
     "build": "webpack --env dev && webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
     "start": "yarn run dev",
+    "prepublish": "rm -rf ./dist/ && yarn run build",
     "predeploy": "cd ./example && yarn && yarn run build",
     "deploy": "gh-pages -d ./example/build"
   },
