@@ -1,6 +1,6 @@
 {
   "name": "react-middle-ellipsis",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Put the dots in the middle of a long string, versus the end.",
   "author": "bluepeter",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "lint": "eslint src/*js",
     "fix": "eslint --fix src/*js",
     "start": "yarn run dev",
-    "prepublish": "rm -rf ./dist/ && yarn run build",
+    "prepare": "rm -rf ./dist/ && yarn run build",
     "predeploy": "cd ./example && yarn && yarn run build",
     "deploy": "gh-pages -d ./example/build"
   },
