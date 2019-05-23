@@ -1,13 +1,13 @@
 {
   "name": "react-middle-ellipsis",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Put the dots in the middle of a long string, versus the end.",
   "author": "bluepeter",
   "license": "MIT",
   "repository": "bluepeter/react-middle-ellipsis",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
+  "module": "dist/index.min.js",
+  "jsnext:main": "dist/index.min.js",
   "engines": {
     "node": ">=8",
     "npm": ">=5"

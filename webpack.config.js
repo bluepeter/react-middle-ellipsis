@@ -9,10 +9,10 @@ let outputFile, mode;
 
 if (env === "build") {
   mode = "production";
-  outputFile = libraryName + ".min.js";
+  outputFile = "index" + ".min.js";
 } else {
   mode = "development";
-  outputFile = libraryName + ".js";
+  outputFile = "index" + ".js";
 }
 
 const config = {
@@ -24,8 +24,7 @@ const config = {
     filename: outputFile,
     library: libraryName,
     libraryTarget: "umd",
-    umdNamedDefine: true,
-    globalObject: "typeof self !== 'undefined' ? self : this",
+    globalObject: "this",
   },
   module: {
     rules: [
@@ -42,7 +41,7 @@ const config = {
     ],
   },
   externals: {
-    // Don't bundle react or react-dom
+    // Don't bundle react or react-dom, obv.
     react: {
       commonjs: "react",
       commonjs2: "react",
@@ -55,10 +54,6 @@ const config = {
       amd: "ReactDOM",
       root: "ReactDOM",
     },
-  },
-  resolve: {
-    modules: [path.resolve("./node_modules"), path.resolve("./src")],
-    extensions: [".json", ".js"],
   },
 };
 
