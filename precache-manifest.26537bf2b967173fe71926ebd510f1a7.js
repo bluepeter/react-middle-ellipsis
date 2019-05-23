@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e47159b7a15ff26e5a6739dc1d688eb",
+    "revision": "5b58b0f3d06073f664eaa67156753b68",
     "url": "/react-middle-ellipsis/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-middle-ellipsis/static/js/2.3310f33a.chunk.js"
   },
   {
-    "revision": "887cf9919c872d6e5896",
-    "url": "/react-middle-ellipsis/static/js/main.09c19a7f.chunk.js"
+    "revision": "12914510482677755e0d",
+    "url": "/react-middle-ellipsis/static/js/main.aba130a9.chunk.js"
   },
   {
     "revision": "335fbdebb95b537c7d28",
