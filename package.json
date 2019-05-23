@@ -15,6 +15,8 @@
   "scripts": {
     "build": "webpack --env dev && webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
+    "lint": "eslint src/*js",
+    "fix": "eslint --fix src/*js",
     "start": "yarn run dev",
     "prepublish": "rm -rf ./dist/ && yarn run build",
     "predeploy": "cd ./example && yarn && yarn run build",

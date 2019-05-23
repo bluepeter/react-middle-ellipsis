@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback } from "react";
 
 const Component = props => {
   const measuredParent = useCallback(node => {
@@ -16,13 +16,13 @@ const Component = props => {
           startRight = Math.ceil(childChars / 2 + delEachSide);
 
         txtNode.textContent =
-          str.substr(0, endLeft) + '...' + str.substr(startRight);
+          str.substr(0, endLeft) + "..." + str.substr(startRight);
       }
     }
     if (node !== null) {
       const parent = node.parentNode,
-        child = parent.querySelector('.constrainedChild'),
-        txtToEllipse = parent.querySelector('.constrainedEllipse');
+        child = parent.querySelector(".constrainedChild"),
+        txtToEllipse = parent.querySelector(".constrainedEllipse");
 
       if (child !== null && txtToEllipse !== null) {
         ellipse(
@@ -36,7 +36,7 @@ const Component = props => {
   });
 
   return (
-    <div ref={measuredParent} style={{ width: '100%' }}>
+    <div ref={measuredParent} style={{ width: "100%" }}>
       {props.children}
     </div>
   );
