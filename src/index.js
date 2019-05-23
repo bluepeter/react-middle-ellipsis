@@ -31,7 +31,11 @@ const Component = props => {
       }
     }
   });
-  return <div ref={measuredParent}>{props.children}</div>;
+  return (
+    <div ref={measuredParent} style={{ width: "100%" }}>
+      {props.children}
+    </div>
+  );
 };
 
 export default Component;

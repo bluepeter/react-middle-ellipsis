@@ -1,6 +1,6 @@
 {
   "name": "react-middle-ellipsis",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Put the dots in the middle of a long string, versus the end.",
   "author": "bluepeter",
   "license": "MIT",
@@ -40,7 +40,7 @@
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-standard": "^3.1.0",
-    "gh-pages": "^1.2.0",
+    "gh-pages": "^2.0.1",
     "react-scripts": "^3.0.1",
     "rollup": "^0.64.1",
     "rollup-plugin-babel": "^3.0.7",
