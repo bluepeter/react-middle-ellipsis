@@ -76,6 +76,7 @@ const Component = props => {
           display: "flex",
           alignItems: "center",
           overflow: "hidden",
+          maxWidth: "100%",
         }}
       >
         <MiddleEllipsis>
@@ -85,11 +86,20 @@ const Component = props => {
         </MiddleEllipsis>
       </div>
 
-      <p style={{ color: "#666" }}>
+      <p
+        style={{
+          color: "#666",
+        }}
+      >
         You can also add text that we *don't* want ellipsed at all, too:
       </p>
 
-      <div style={{ width: "350px" }}>
+      <div
+        style={{
+          width: "350px",
+          maxWidth: "100%",
+        }}
+      >
         <MiddleEllipsis>
           <span className="constrainedChild">
             Don't ellipse me though.{" "}
@@ -97,7 +107,12 @@ const Component = props => {
           </span>
         </MiddleEllipsis>
       </div>
-      <div style={{ width: "250px" }}>
+      <div
+        style={{
+          width: "250px",
+          maxWidth: "100%",
+        }}
+      >
         <MiddleEllipsis>
           <span className="constrainedChild">
             Don't ellipse me though.{" "}
