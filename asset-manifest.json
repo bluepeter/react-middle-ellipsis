@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/react-middle-ellipsis/static/js/main.aba130a9.chunk.js",
-    "main.js.map": "/react-middle-ellipsis/static/js/main.aba130a9.chunk.js.map",
+    "main.js": "/react-middle-ellipsis/static/js/main.37f68270.chunk.js",
+    "main.js.map": "/react-middle-ellipsis/static/js/main.37f68270.chunk.js.map",
     "runtime~main.js": "/react-middle-ellipsis/static/js/runtime~main.e349cbb3.js",
     "runtime~main.js.map": "/react-middle-ellipsis/static/js/runtime~main.e349cbb3.js.map",
-    "static/js/2.cc16dd21.chunk.js": "/react-middle-ellipsis/static/js/2.cc16dd21.chunk.js",
-    "static/js/2.cc16dd21.chunk.js.map": "/react-middle-ellipsis/static/js/2.cc16dd21.chunk.js.map",
+    "static/js/2.3dcbe31e.chunk.js": "/react-middle-ellipsis/static/js/2.3dcbe31e.chunk.js",
+    "static/js/2.3dcbe31e.chunk.js.map": "/react-middle-ellipsis/static/js/2.3dcbe31e.chunk.js.map",
     "index.html": "/react-middle-ellipsis/index.html",
-    "precache-manifest.ce7b60a75c291991de16be5eb0a1eba4.js": "/react-middle-ellipsis/precache-manifest.ce7b60a75c291991de16be5eb0a1eba4.js",
+    "precache-manifest.cbb93033fc09c83443205d59d8e441b2.js": "/react-middle-ellipsis/precache-manifest.cbb93033fc09c83443205d59d8e441b2.js",
     "service-worker.js": "/react-middle-ellipsis/service-worker.js"
   }
 }
