@@ -23,6 +23,8 @@ parent node. Then, it will look for a child node whose class is
 of the child, and then shorten the text element whose class is
 `constrainedEllipsis` to fit within the parent.
 
+The component re-computes things if the browser window is resized, too!
+
 Why do we have both `constrainedChild` and `constrainedEllipsis`?
 Because we want BOTH to fit within the parent, but only one of them
 should be ellipse'd. This way, things such as icons or images won't
@@ -30,26 +32,25 @@ be ellipsed.
 
 ```jsx
 import React, { Component } from "react";
-
 import MiddleEllipsis from "react-middle-ellipsis";
 
-class Example extends Component {
-  render() {
-    return (
-      <div style={{ width: "350px", whiteSpace: "nowrap" }}>
-        <MiddleEllipsis>
-          <span className="constrainedChild">
-            Don't ellipse me.{" "}
-            <span className="constrainedEllipse">
-              I am some long text that should be ellipsed in the middle because
-              the end contains important stuff.
-            </span>
+const Component = props => {
+  return (
+    <div style={{ width: "350px", whiteSpace: "nowrap" }}>
+      <MiddleEllipsis>
+        <span className="constrainedChild">
+          Don't ellipse me.{" "}
+          <span className="constrainedEllipse">
+            I am some long text that should be ellipsed in the middle because
+            the end contains important stuff.
           </span>
-        </MiddleEllipsis>
-      </div>
-    );
-  }
-}
+        </span>
+      </MiddleEllipsis>
+    </div>
+  );
+};
+
+export default Component;
 ```
 
 ## Development
