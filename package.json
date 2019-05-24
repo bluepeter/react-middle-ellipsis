@@ -13,12 +13,12 @@
     "npm": ">=5"
   },
   "scripts": {
-    "build": "webpack --env dev && webpack --env build",
-    "dev": "webpack --progress --colors --watch --env dev",
+    "build": "rm -rf ./dist/ && webpack --env dev && webpack --env build",
+    "dev": "rm -rf ./dist/ && webpack --progress --colors --watch --env dev",
     "lint": "eslint src/*js",
     "fix": "eslint --fix src/*js",
     "start": "yarn run dev",
-    "prepare": "rm -rf ./dist/ && yarn run build",
+    "prepare": "yarn run build",
     "predeploy": "cd ./example && yarn && yarn run build",
     "deploy": "gh-pages -d ./example/build"
   },
