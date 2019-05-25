@@ -40,7 +40,7 @@ const ellipse = (parentNode, childNode, txtNode) => {
   const childWidth = childNode.offsetWidth,
     containerWidth = parentNode.offsetWidth;
 
-  if (childWidth * 1.1 > containerWidth) {
+  if (childWidth > containerWidth) {
     const str = txtNode.textContent,
       childChars = str.length,
       avgLetterSize = childWidth / childChars,

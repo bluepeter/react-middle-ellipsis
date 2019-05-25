@@ -31,7 +31,7 @@ should be ellipse'd. This way, things such as icons or images won't
 be ellipsed.
 
 ```jsx
-import React, { Component } from "react";
+import React from "react";
 import MiddleEllipsis from "react-middle-ellipsis";
 
 const Component = props => {
