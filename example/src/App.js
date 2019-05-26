@@ -89,7 +89,8 @@ const Component = props => {
       >
         <MiddleEllipsis>
           <span>
-            Don't ellipse me though. <span class="ellipseMe">{longText}</span>
+            Don't ellipse me though.{" "}
+            <span className="ellipseMe">{longText}</span>
           </span>
         </MiddleEllipsis>
       </div>
@@ -102,7 +103,8 @@ const Component = props => {
       >
         <MiddleEllipsis>
           <span>
-            Don't ellipse me though. <span class="ellipseMe">{longText}</span>
+            Don't ellipse me though.{" "}
+            <span className="ellipseMe">{longText}</span>
           </span>
         </MiddleEllipsis>
       </div>
@@ -115,7 +117,8 @@ const Component = props => {
       >
         <MiddleEllipsis>
           <span>
-            Don't ellipse me though. <span class="ellipseMe">{longText}</span>
+            Don't ellipse me though.{" "}
+            <span className="ellipseMe">{longText}</span>
           </span>
         </MiddleEllipsis>
       </div>

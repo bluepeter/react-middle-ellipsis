@@ -44,13 +44,14 @@ const Component = props => {
 const ellipse = (parentNode, childNode, txtNode) => {
   const childWidth = childNode.offsetWidth,
     containerWidth = parentNode.offsetWidth,
-    txtWidth = txtNode.offsetWidth;
+    txtWidth = txtNode.offsetWidth,
+    targetWidth = childWidth > txtWidth ? childWidth : txtWidth;
 
-  if (childWidth > containerWidth) {
+  if (targetWidth > containerWidth) {
     const str = txtNode.textContent,
       txtChars = str.length,
       avgLetterSize = txtWidth / txtChars,
-      canFit = (containerWidth - (childWidth - txtWidth)) / avgLetterSize,
+      canFit = (containerWidth - (targetWidth - txtWidth)) / avgLetterSize,
       delEachSide = (txtChars - canFit + 5) / 2,
       endLeft = Math.floor(txtChars / 2 - delEachSide),
       startRight = Math.ceil(txtChars / 2 + delEachSide);
