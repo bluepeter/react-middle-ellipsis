@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/react-middle-ellipsis/static/js/main.6e26b817.chunk.js",
-    "main.js.map": "/react-middle-ellipsis/static/js/main.6e26b817.chunk.js.map",
+    "main.js": "/react-middle-ellipsis/static/js/main.97a2f5a2.chunk.js",
+    "main.js.map": "/react-middle-ellipsis/static/js/main.97a2f5a2.chunk.js.map",
     "runtime~main.js": "/react-middle-ellipsis/static/js/runtime~main.e349cbb3.js",
     "runtime~main.js.map": "/react-middle-ellipsis/static/js/runtime~main.e349cbb3.js.map",
     "static/js/2.3dcbe31e.chunk.js": "/react-middle-ellipsis/static/js/2.3dcbe31e.chunk.js",
     "static/js/2.3dcbe31e.chunk.js.map": "/react-middle-ellipsis/static/js/2.3dcbe31e.chunk.js.map",
     "index.html": "/react-middle-ellipsis/index.html",
-    "precache-manifest.592cee5c8fbd191d6142e4d5ca805584.js": "/react-middle-ellipsis/precache-manifest.592cee5c8fbd191d6142e4d5ca805584.js",
+    "precache-manifest.5962cf2715bbc574a25f6b4d542f33e3.js": "/react-middle-ellipsis/precache-manifest.5962cf2715bbc574a25f6b4d542f33e3.js",
     "service-worker.js": "/react-middle-ellipsis/service-worker.js"
   }
 }
