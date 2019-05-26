@@ -3,8 +3,13 @@ import React, { useCallback } from "react";
 const Component = props => {
   const prepEllipse = node => {
       const parent = node.parentNode,
-        child = parent.querySelector(".constrainedChild"),
-        txtToEllipse = parent.querySelector(".constrainedEllipse");
+        child =
+          parent.querySelector(".constrainedChild") /* Legacy. */ ||
+          node.childNodes[0],
+        txtToEllipse =
+          parent.querySelector(".ellipseMe") ||
+          parent.querySelector(".constrainedEllipse") /* Legacy. */ ||
+          child;
 
       if (child !== null && txtToEllipse !== null) {
         // (Re)-set text back to data-original-text if it exists.
@@ -38,16 +43,17 @@ const Component = props => {
 
 const ellipse = (parentNode, childNode, txtNode) => {
   const childWidth = childNode.offsetWidth,
-    containerWidth = parentNode.offsetWidth;
+    containerWidth = parentNode.offsetWidth,
+    txtWidth = txtNode.offsetWidth;
 
   if (childWidth > containerWidth) {
     const str = txtNode.textContent,
-      childChars = str.length,
-      avgLetterSize = childWidth / childChars,
-      canFit = containerWidth / avgLetterSize,
-      delEachSide = (childChars - canFit + 5) / 2,
-      endLeft = Math.floor(childChars / 2 - delEachSide),
-      startRight = Math.ceil(childChars / 2 + delEachSide);
+      txtChars = str.length,
+      avgLetterSize = txtWidth / txtChars,
+      canFit = (containerWidth - (childWidth - txtWidth)) / avgLetterSize,
+      delEachSide = (txtChars - canFit + 5) / 2,
+      endLeft = Math.floor(txtChars / 2 - delEachSide),
+      startRight = Math.ceil(txtChars / 2 + delEachSide);
 
     txtNode.setAttribute("data-original", txtNode.textContent);
     txtNode.textContent =

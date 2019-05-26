@@ -7,11 +7,11 @@ const Component = props => {
   return (
     <div
       style={{
-        margin: "100px",
+        padding: "100px",
         fontFamily: "sans-serif",
         lineHeight: "2em",
-        whiteSpace: "nowrap",
       }}
+      className="parent"
     >
       <h3 style={{ color: "#666" }}>
         Let's do some middle ellipsing in React!
@@ -25,44 +25,32 @@ const Component = props => {
       </p>
       <div>
         <MiddleEllipsis>
-          <span className="constrainedChild">
-            <span className="constrainedEllipse">{longText}</span>
-          </span>
+          <span>{longText}</span>
         </MiddleEllipsis>
       </div>
       <div style={{ width: "550px", maxWidth: "100%" }}>
         <MiddleEllipsis>
-          <span className="constrainedChild">
-            <span className="constrainedEllipse">{longText}</span>
-          </span>
+          <span>{longText}</span>
         </MiddleEllipsis>
       </div>
       <div style={{ width: "450px", maxWidth: "100%" }}>
         <MiddleEllipsis>
-          <span className="constrainedChild">
-            <span className="constrainedEllipse">{longText}</span>
-          </span>
+          <span>{longText}</span>
         </MiddleEllipsis>
       </div>
       <div style={{ width: "350px", maxWidth: "100%" }}>
         <MiddleEllipsis>
-          <span className="constrainedChild">
-            <span className="constrainedEllipse">{longText}</span>
-          </span>
+          <span>{longText}</span>
         </MiddleEllipsis>
       </div>
       <div style={{ width: "250px", maxWidth: "100%" }}>
         <MiddleEllipsis>
-          <span className="constrainedChild">
-            <span className="constrainedEllipse">{longText}</span>
-          </span>
+          <span>{longText}</span>
         </MiddleEllipsis>
       </div>
       <div style={{ width: "150px", maxWidth: "100%" }}>
         <MiddleEllipsis>
-          <span className="constrainedChild">
-            <span className="constrainedEllipse">{longText}</span>
-          </span>
+          <span>{longText}</span>
         </MiddleEllipsis>
       </div>
 
@@ -80,9 +68,7 @@ const Component = props => {
         }}
       >
         <MiddleEllipsis>
-          <span className="constrainedChild">
-            <span className="constrainedEllipse">/</span>
-          </span>
+          <span>/</span>
         </MiddleEllipsis>
       </div>
 
@@ -96,14 +82,27 @@ const Component = props => {
 
       <div
         style={{
-          width: "350px",
+          width: "550px",
           maxWidth: "100%",
+          whiteSpace: "nowrap",
         }}
       >
         <MiddleEllipsis>
-          <span className="constrainedChild">
-            Don't ellipse me though.{" "}
-            <span className="constrainedEllipse">{longText}</span>
+          <span>
+            Don't ellipse me though. <span class="ellipseMe">{longText}</span>
+          </span>
+        </MiddleEllipsis>
+      </div>
+      <div
+        style={{
+          width: "350px",
+          maxWidth: "100%",
+          whiteSpace: "nowrap",
+        }}
+      >
+        <MiddleEllipsis>
+          <span>
+            Don't ellipse me though. <span class="ellipseMe">{longText}</span>
           </span>
         </MiddleEllipsis>
       </div>
@@ -111,19 +110,19 @@ const Component = props => {
         style={{
           width: "250px",
           maxWidth: "100%",
+          whiteSpace: "nowrap",
         }}
       >
         <MiddleEllipsis>
-          <span className="constrainedChild">
-            Don't ellipse me though.{" "}
-            <span className="constrainedEllipse">{longText}</span>
+          <span>
+            Don't ellipse me though. <span class="ellipseMe">{longText}</span>
           </span>
         </MiddleEllipsis>
-        <p style={{ color: "#666" }}>
-          Brought to you by the friendly folks at{" "}
-          <a href="https://foxandgeese.com">Fox and Geese</a>
-        </p>
       </div>
+      <p style={{ color: "#666" }}>
+        Brought to you by the friendly folks at{" "}
+        <a href="https://foxandgeese.com">Fox and Geese</a>
+      </p>
     </div>
   );
 };

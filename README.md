@@ -16,19 +16,14 @@ yarn add react-middle-ellipsis
 
 ## Usage
 
-Once `import`ed, you can then wrap any element with
-`<MiddleEllipsis>`. This will compute the width of the surrounding
-parent node. Then, it will look for a child node whose class is
-`constrainedChild`: it will use this element to compute the width
+Once `import`ed, you can then wrap any node with `<MiddleEllipsis>`.
+This will compute the width of the surrounding parent node. Then, it
+will look for the child node (so make sure to add a `span` at
+minimum internally): it will use this element to compute the width
 of the child, and then shorten the text element whose class is
-`constrainedEllipsis` to fit within the parent.
+`ellipseMe` (optional) to fit within the parent.
 
 The component re-computes things if the browser window is resized, too!
-
-Why do we have both `constrainedChild` and `constrainedEllipsis`?
-Because we want BOTH to fit within the parent, but only one of them
-should be ellipse'd. This way, things such as icons or images won't
-be ellipsed.
 
 ```jsx
 import React from "react";
@@ -36,17 +31,27 @@ import MiddleEllipsis from "react-middle-ellipsis";
 
 const Component = props => {
   return (
+  <>
     <div style={{ width: "350px", whiteSpace: "nowrap" }}>
       <MiddleEllipsis>
-        <span className="constrainedChild">
+        <span>
+          I am some long text that should be ellipsed in the middle because
+          the end contains important stuff.
+        </span>
+      </MiddleEllipsis>
+    </div>
+    <div style={{ width: "350px", whiteSpace: "nowrap" }}>
+      <MiddleEllipsis>
+        <span>
           Don't ellipse me.{" "}
-          <span className="constrainedEllipse">
+          <span className="ellipseMe">
             I am some long text that should be ellipsed in the middle because
             the end contains important stuff.
           </span>
         </span>
       </MiddleEllipsis>
     </div>
+  <>
   );
 };
 
