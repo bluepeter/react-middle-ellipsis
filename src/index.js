@@ -35,7 +35,10 @@ const Component = props => {
     });
 
   return (
-    <div ref={measuredParent}>
+    <div
+      ref={measuredParent}
+      style={{ ...(props.width && { width: props.width }) }}
+    >
       {props.children}
     </div>
   );
