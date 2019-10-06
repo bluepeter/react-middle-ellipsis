@@ -2,14 +2,14 @@ import React, { useCallback } from "react";
 
 const Component = props => {
   const prepEllipse = node => {
-      const parent = node.parentNode,
-        child =
-          parent.querySelector(".constrainedChild") /* Legacy. */ ||
-          node.childNodes[0],
-        txtToEllipse =
-          parent.querySelector(".ellipseMe") ||
-          parent.querySelector(".constrainedEllipse") /* Legacy. */ ||
-          child;
+      const parent = node.parentNode;
+      const child =
+        parent.querySelector(".constrainedChild") /* Legacy. */ ||
+        node.childNodes[0];
+      const txtToEllipse =
+        parent.querySelector(".ellipseMe") ||
+        parent.querySelector(".constrainedEllipse") /* Legacy. */ ||
+        child;
 
       if (child !== null && txtToEllipse !== null) {
         // (Re)-set text back to data-original-text if it exists.
@@ -45,19 +45,19 @@ const Component = props => {
 };
 
 const ellipse = (parentNode, childNode, txtNode) => {
-  const childWidth = childNode.offsetWidth,
-    containerWidth = parentNode.offsetWidth,
-    txtWidth = txtNode.offsetWidth,
-    targetWidth = childWidth > txtWidth ? childWidth : txtWidth;
+  const childWidth = childNode.offsetWidth;
+  const containerWidth = parentNode.offsetWidth;
+  const txtWidth = txtNode.offsetWidth;
+  const targetWidth = childWidth > txtWidth ? childWidth : txtWidth;
 
   if (targetWidth > containerWidth) {
-    const str = txtNode.textContent,
-      txtChars = str.length,
-      avgLetterSize = txtWidth / txtChars,
-      canFit = (containerWidth - (targetWidth - txtWidth)) / avgLetterSize,
-      delEachSide = (txtChars - canFit + 5) / 2,
-      endLeft = Math.floor(txtChars / 2 - delEachSide),
-      startRight = Math.ceil(txtChars / 2 + delEachSide);
+    const str = txtNode.textContent;
+    const txtChars = str.length;
+    const avgLetterSize = txtWidth / txtChars;
+    const canFit = (containerWidth - (targetWidth - txtWidth)) / avgLetterSize;
+    const delEachSide = (txtChars - canFit + 5) / 2;
+    const endLeft = Math.floor(txtChars / 2 - delEachSide);
+    const startRight = Math.ceil(txtChars / 2 + delEachSide);
 
     txtNode.setAttribute("data-original", txtNode.textContent);
     txtNode.textContent =
