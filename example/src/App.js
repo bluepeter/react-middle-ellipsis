@@ -26,7 +26,7 @@ const Component = props => {
         Try resizing the browser window for some extra fun!
       </p>
       <p style={{ color: "#666" }}>
-        <button onClick={() => setWidth(width > 1 ? 1 : 2)}>
+        <button onClick={() => setWidth(width > 1 ? 1 : 1.5)}>
           Click me to resize widths
         </button>
       </p>
@@ -96,8 +96,20 @@ const Component = props => {
       >
         <MiddleEllipsis>
           <span>
-            Don't ellipse me though.{" "}
-            <span className="ellipseMe">{longText}</span>
+            Don't ellipse me. <span className="ellipseMe">{longText}</span>
+          </span>
+        </MiddleEllipsis>
+      </div>
+      <div
+        style={{
+          width: Number(450 / width) + "px",
+          maxWidth: "100%",
+          whiteSpace: "nowrap",
+        }}
+      >
+        <MiddleEllipsis>
+          <span>
+            Don't ellipse me. <span className="ellipseMe">{longText}</span>
           </span>
         </MiddleEllipsis>
       </div>
@@ -110,22 +122,7 @@ const Component = props => {
       >
         <MiddleEllipsis>
           <span>
-            Don't ellipse me though.{" "}
-            <span className="ellipseMe">{longText}</span>
-          </span>
-        </MiddleEllipsis>
-      </div>
-      <div
-        style={{
-          width: Number(250 / width) + "px",
-          maxWidth: "100%",
-          whiteSpace: "nowrap",
-        }}
-      >
-        <MiddleEllipsis>
-          <span>
-            Don't ellipse me though.{" "}
-            <span className="ellipseMe">{longText}</span>
+            Don't ellipse me. <span className="ellipseMe">{longText}</span>
           </span>
         </MiddleEllipsis>
       </div>
