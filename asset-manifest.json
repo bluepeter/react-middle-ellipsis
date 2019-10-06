@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/react-middle-ellipsis/static/js/main.75d0e0d9.chunk.js",
-    "main.js.map": "/react-middle-ellipsis/static/js/main.75d0e0d9.chunk.js.map",
+    "main.js": "/react-middle-ellipsis/static/js/main.67adf6df.chunk.js",
+    "main.js.map": "/react-middle-ellipsis/static/js/main.67adf6df.chunk.js.map",
     "runtime-main.js": "/react-middle-ellipsis/static/js/runtime-main.f5c19b6c.js",
     "runtime-main.js.map": "/react-middle-ellipsis/static/js/runtime-main.f5c19b6c.js.map",
     "static/js/2.bff7aa7d.chunk.js": "/react-middle-ellipsis/static/js/2.bff7aa7d.chunk.js",
     "static/js/2.bff7aa7d.chunk.js.map": "/react-middle-ellipsis/static/js/2.bff7aa7d.chunk.js.map",
     "index.html": "/react-middle-ellipsis/index.html",
-    "precache-manifest.5ff2ae2b9299d96b97263b232fb9a9fb.js": "/react-middle-ellipsis/precache-manifest.5ff2ae2b9299d96b97263b232fb9a9fb.js",
+    "precache-manifest.fef781e6818a2986c4091c6f4ebd1426.js": "/react-middle-ellipsis/precache-manifest.fef781e6818a2986c4091c6f4ebd1426.js",
     "service-worker.js": "/react-middle-ellipsis/service-worker.js"
   },
   "entrypoints": [
     "static/js/runtime-main.f5c19b6c.js",
     "static/js/2.bff7aa7d.chunk.js",
-    "static/js/main.75d0e0d9.chunk.js"
+    "static/js/main.67adf6df.chunk.js"
   ]
 }
