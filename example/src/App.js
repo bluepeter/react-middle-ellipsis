@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import MiddleEllipsis from "react-middle-ellipsis";
 
 const Component = props => {
   const longText =
     "https://thisIsAVeryLongUrl/that/needs/to/be/truncated/in/the/middle/so/that/the/important/end/matter/is/preserved/here.html";
+  const [width, setWidth] = useState(1);
+
   return (
     <div
       style={{
@@ -23,32 +25,37 @@ const Component = props => {
       <p style={{ color: "#666" }}>
         Try resizing the browser window for some extra fun!
       </p>
+      <p style={{ color: "#666" }}>
+        <button onClick={() => setWidth(width > 1 ? 1 : 2)}>
+          Click me to resize widths
+        </button>
+      </p>
       <div>
         <MiddleEllipsis>
           <span>{longText}</span>
         </MiddleEllipsis>
       </div>
-      <div style={{ width: "550px", maxWidth: "100%" }}>
+      <div style={{ width: Number(550 / width) + "px", maxWidth: "100%" }}>
         <MiddleEllipsis>
           <span>{longText}</span>
         </MiddleEllipsis>
       </div>
-      <div style={{ width: "450px", maxWidth: "100%" }}>
+      <div style={{ width: Number(450 / width) + "px", maxWidth: "100%" }}>
         <MiddleEllipsis>
           <span>{longText}</span>
         </MiddleEllipsis>
       </div>
-      <div style={{ width: "350px", maxWidth: "100%" }}>
+      <div style={{ width: Number(350 / width) + "px", maxWidth: "100%" }}>
         <MiddleEllipsis>
           <span>{longText}</span>
         </MiddleEllipsis>
       </div>
-      <div style={{ width: "250px", maxWidth: "100%" }}>
+      <div style={{ width: Number(250 / width) + "px", maxWidth: "100%" }}>
         <MiddleEllipsis>
           <span>{longText}</span>
         </MiddleEllipsis>
       </div>
-      <div style={{ width: "150px", maxWidth: "100%" }}>
+      <div style={{ width: Number(150 / width) + "px", maxWidth: "100%" }}>
         <MiddleEllipsis>
           <span>{longText}</span>
         </MiddleEllipsis>
@@ -60,7 +67,7 @@ const Component = props => {
       </p>
       <div
         style={{
-          width: "150px",
+          width: Number(150 / width) + "px",
           display: "flex",
           alignItems: "center",
           overflow: "hidden",
@@ -82,7 +89,7 @@ const Component = props => {
 
       <div
         style={{
-          width: "550px",
+          width: Number(550 / width) + "px",
           maxWidth: "100%",
           whiteSpace: "nowrap",
         }}
@@ -96,7 +103,7 @@ const Component = props => {
       </div>
       <div
         style={{
-          width: "350px",
+          width: Number(350 / width) + "px",
           maxWidth: "100%",
           whiteSpace: "nowrap",
         }}
@@ -110,7 +117,7 @@ const Component = props => {
       </div>
       <div
         style={{
-          width: "250px",
+          width: Number(250 / width) + "px",
           maxWidth: "100%",
           whiteSpace: "nowrap",
         }}
