@@ -40,7 +40,7 @@ const Component = props => {
       style={{
         wordBreak: "keep-all",
         overflowWrap: "normal",
-        ...(props.width && { width: props.width }),
+        ...(props.width && { width: props.width })
       }}
     >
       {props.children}
