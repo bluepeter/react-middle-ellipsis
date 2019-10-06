@@ -37,7 +37,11 @@ const Component = props => {
   return (
     <div
       ref={measuredParent}
-      style={{ ...(props.width && { width: props.width }) }}
+      style={{
+        wordBreak: "keep-all",
+        overflowWrap: "normal",
+        ...(props.width && { width: props.width }),
+      }}
     >
       {props.children}
     </div>
