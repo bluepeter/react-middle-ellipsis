@@ -1,6 +1,6 @@
 {
   "name": "react-middle-ellipsis",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Put the dots in the middle of a long string, versus the end.",
   "author": "bluepeter",
   "license": "MIT",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "rm -rf ./dist/ && webpack --env dev && webpack --env build",
-    "dev": "rm -rf ./dist/ && webpack --progress --colors --watch --env dev",
+    "dev": "rm -rf ./dist/ && webpack --progress --watch --env dev",
     "lint": "eslint src/*js",
     "fix": "eslint --fix src/*js",
     "start": "yarn run dev",
@@ -27,24 +27,24 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/plugin-transform-runtime": "^7.8.3",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/preset-react": "^7.8.3",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-add-module-exports": "^1.0.2",
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-add-module-exports": "^1.0.4",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
-    "eslint": "^6.8.0",
-    "eslint-loader": "^3.0.3",
-    "gh-pages": "^2.2.0",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-scripts": "^3.4.0",
+    "eslint": "^7.26.0",
+    "eslint-loader": "^4.0.2",
+    "gh-pages": "^3.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3",
     "uglifyjs-webpack-plugin": "^2.1.3",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11",
-    "yargs": "^15.3.0"
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0",
+    "yargs": "^17.0.1"
   },
   "babel": {
     "presets": [

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MiddleEllipsis from "react-middle-ellipsis";
 
-const Component = props => {
+const Component = () => {
   const longText =
     "https://thisIsAVeryLongUrl/that/needs/to/be/truncated/in/the/middle/so/that/the/important/end/matter/is/preserved/here.html";
   const [width, setWidth] = useState(1);
