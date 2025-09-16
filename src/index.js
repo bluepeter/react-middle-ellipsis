@@ -1,38 +1,61 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 
 const Component = props => {
-  const prepEllipse = node => {
-      const parent = node.parentNode;
-      const child =
-        parent.querySelector(".constrainedChild") /* Legacy. */ ||
-        node.childNodes[0];
-      const txtToEllipse =
-        parent.querySelector(".ellipseMe") ||
-        parent.querySelector(".constrainedEllipse") /* Legacy. */ ||
-        child;
+  const nodeRef = useRef(null);
+  const prepEllipse = useCallback(node => {
+    const parent = node.parentNode;
+    const child =
+      parent.querySelector(".constrainedChild") /* Legacy. */ ||
+      node.childNodes[0];
+    const txtToEllipse =
+      parent.querySelector(".ellipseMe") ||
+      parent.querySelector(".constrainedEllipse") /* Legacy. */ ||
+      child;
 
-      if (child !== null && txtToEllipse !== null) {
-        // (Re)-set text back to data-original-text if it exists.
-        if (txtToEllipse.hasAttribute("data-original")) {
-          txtToEllipse.textContent = txtToEllipse.getAttribute("data-original");
-        }
-
-        ellipse(
-          // Use the smaller width.
-          node.offsetWidth > parent.offsetWidth ? parent : node,
-          child,
-          txtToEllipse
-        );
+    if (child !== null && txtToEllipse !== null) {
+      // (Re)-set text back to data-original-text if it exists.
+      if (txtToEllipse.hasAttribute("data-original")) {
+        txtToEllipse.textContent = txtToEllipse.getAttribute("data-original");
       }
-    },
-    measuredParent = useCallback(node => {
+
+      ellipse(
+        // Use the smaller width.
+        node.offsetWidth > parent.offsetWidth ? parent : node,
+        child,
+        txtToEllipse
+      );
+    }
+  }, []);
+
+  const measuredParent = useCallback(
+    node => {
+      nodeRef.current = node;
       if (node !== null) {
-        window.addEventListener("resize", () => {
-          prepEllipse(node);
-        });
         prepEllipse(node);
       }
-    });
+    },
+    [prepEllipse]
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (nodeRef.current) {
+        prepEllipse(nodeRef.current);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [prepEllipse]);
+
+  // Re-run ellipsis calculation when component re-renders (for prop/state changes)
+  useEffect(() => {
+    if (nodeRef.current) {
+      prepEllipse(nodeRef.current);
+    }
+  });
 
   return (
     <div
