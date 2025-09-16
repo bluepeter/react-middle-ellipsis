@@ -1,60 +1,56 @@
 const webpack = require("webpack");
 const path = require("path");
-const env = require("yargs").argv.env; // use --env with webpack 2
+const ESLintPlugin = require("eslint-webpack-plugin");
 const pkg = require("./package.json");
 
 let libraryName = pkg.name;
 
-let outputFile, mode;
+module.exports = (env, argv) => {
+  const isProduction = env && env.build;
 
-if (env === "build") {
-  mode = "production";
-  outputFile = "index" + ".min.js";
-} else {
-  mode = "development";
-  outputFile = "index" + ".js";
-}
+  const outputFile = isProduction ? "index.min.js" : "index.js";
+  const mode = isProduction ? "production" : "development";
 
-const config = {
-  mode: mode,
-  entry: __dirname + "/src/index.js",
-  devtool: "inline-source-map",
-  output: {
-    path: __dirname + "/dist",
-    filename: outputFile,
-    library: libraryName,
-    libraryTarget: "umd",
-    globalObject: "this",
-  },
-  module: {
-    rules: [
-      {
-        test: /(\.jsx|\.js)$/,
-        loader: "babel-loader",
-        exclude: /(node_modules|bower_components)/,
-      },
-      {
-        test: /(\.jsx|\.js)$/,
-        loader: "eslint-loader",
-        exclude: /node_modules/,
-      },
+  return {
+    mode: mode,
+    entry: __dirname + "/src/index.js",
+    devtool: "inline-source-map",
+    output: {
+      path: __dirname + "/dist",
+      filename: outputFile,
+      library: libraryName,
+      libraryTarget: "umd",
+      globalObject: "this",
+    },
+    module: {
+      rules: [
+        {
+          test: /(\.jsx|\.js)$/,
+          loader: "babel-loader",
+          exclude: /(node_modules|bower_components)/,
+        },
+      ],
+    },
+    plugins: [
+      new ESLintPlugin({
+        extensions: ["js", "jsx"],
+        exclude: ["node_modules"],
+      }),
     ],
-  },
-  externals: {
-    // Don't bundle react or react-dom, obv.
-    react: {
-      commonjs: "react",
-      commonjs2: "react",
-      amd: "React",
-      root: "React",
+    externals: {
+      // Don't bundle react or react-dom, obv.
+      react: {
+        commonjs: "react",
+        commonjs2: "react",
+        amd: "React",
+        root: "React",
+      },
+      "react-dom": {
+        commonjs: "react-dom",
+        commonjs2: "react-dom",
+        amd: "ReactDOM",
+        root: "ReactDOM",
+      },
     },
-    "react-dom": {
-      commonjs: "react-dom",
-      commonjs2: "react-dom",
-      amd: "ReactDOM",
-      root: "ReactDOM",
-    },
-  },
+  };
 };
-
-module.exports = config;
