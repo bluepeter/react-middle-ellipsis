@@ -1,5 +1,4 @@
 {
-
   "env": {
     "browser": true,
     "es6": true,
@@ -19,11 +18,15 @@
     "sinon": true
   },
 
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
 
-  "plugins": [
-
-  ],
+  "plugins": [],
 
   "rules": {
     "block-scoped-var": 2,
@@ -45,10 +48,10 @@
     "func-style": 0,
     "generator-star-spacing": [2, "both"],
     "guard-for-in": 0,
-    "handle-callback-err": [2, "^(err|error|anySpecificError)$" ],
+    "handle-callback-err": [2, "^(err|error|anySpecificError)$"],
     "indent": [2, 2, { "SwitchCase": 1 }],
     "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
-    "keyword-spacing": [2, {"before": true, "after": true}],
+    "keyword-spacing": [2, { "before": true, "after": true }],
     "linebreak-style": 0,
     "max-depth": 0,
     "max-len": [0, 120, 4],
@@ -144,7 +147,10 @@
     "no-unneeded-ternary": 2,
     "no-unreachable": 2,
     "no-unused-expressions": 0,
-    "no-unused-vars": [2, { "vars": "all", "varsIgnorePattern": "[Rr]eact", "args": "after-used" }],
+    "no-unused-vars": [
+      2,
+      { "vars": "all", "varsIgnorePattern": "[Rr]eact", "args": "after-used" }
+    ],
     "no-use-before-define": 0,
     "no-var": 0,
     "no-void": 0,
@@ -161,7 +167,10 @@
     "semi-spacing": 0,
     "sort-vars": 0,
     "space-before-blocks": [2, "always"],
-    "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
+    "space-before-function-paren": [
+      2,
+      { "anonymous": "always", "named": "never" }
+    ],
     "space-in-brackets": 0,
     "space-in-parens": [2, "never"],
     "space-infix-ops": 2,

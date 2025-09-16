@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const path = require("path");
+const ESLintPlugin = require("eslint-webpack-plugin");
 const env = require("yargs").argv.env; // use --env with webpack 2
 const pkg = require("./package.json");
 
@@ -33,13 +34,14 @@ const config = {
         loader: "babel-loader",
         exclude: /(node_modules|bower_components)/,
       },
-      {
-        test: /(\.jsx|\.js)$/,
-        loader: "eslint-loader",
-        exclude: /node_modules/,
-      },
     ],
   },
+  plugins: [
+    new ESLintPlugin({
+      extensions: ["js", "jsx"],
+      exclude: ["node_modules"],
+    }),
+  ],
   externals: {
     // Don't bundle react or react-dom, obv.
     react: {
