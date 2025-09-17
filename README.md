@@ -5,6 +5,9 @@
 Adding ellipses to the end of long text is cool. But not always! Sometimes the
 end of the text contains vital information, particularly for URLs or filenames.
 
+- This: Supercalifragilist... (how ellipsing generally works)
+- That: Supercalif...idocious (how you might want it to work)
+
 This React component is designed with that use case in mind.
 
 ## Install
